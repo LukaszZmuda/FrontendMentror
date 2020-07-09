@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(130deg, #b7b8b6, #c37f17);
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 2rem;
+    letter-spacing: 5px;
+    color: white;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button {
+    color: #d88771;
+    cursor: pointer;
+    transition: all .3s linear;
+
+}
+
+form button:hover {
+    background: #d88771;
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: .5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .8s linear;
+}
+
+.todo li {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.trash-btn,
+.complete-btn {
+    background: #ff6f47;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .8s linear;
+}
+
+.complete-btn {
+    background: green;
+}
+
+.todo-item {
+    padding: 0rem .5rem;
+}
+
+.trash-btn:hover,
+.complete-btn:hover {
+    opacity: .8;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.fall {
+    transform: translateX(80%);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #d88771;
+    cursor: pointer;
+    width: 10rem;
+    padding: 1rem;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+
+
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    color: #d88771;
+    cursor: inherit;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all .3s linear;
+}
+
+.select:hover::after {
+    background: #d88771;
+    color: white;
+}
